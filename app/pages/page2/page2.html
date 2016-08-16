@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar primary>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Latest News</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let new of news" (click)="itemTapped($event, new.SubID)">
+      <ion-thumbnail item-left>
+        <img src="http://textkhmer.com/img/thumb/{{new.SubImg}}">
+      </ion-thumbnail>
+      <h2>{{new.SubTitle}}</h2>
+      <p>{{new.SubDatea}}</p>
+      <button clear item-right>View</button>
+    </ion-item>
+  </ion-list>
+</ion-content>
